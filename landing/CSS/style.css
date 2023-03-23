@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "roboto";
+  src: url("../Assets/Fonts/Roboto-Regular-webfont.woff") format("woff"),
+    url("../Assets/Fonts/Roboto-Bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("../Assets/Fonts/Roboto-Bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* END font-face */
+
+:root {
+  /* Font styles */
+  font-family: roboto;
+  font-size: 1.125em;
+  /* Default font size 16px */
+
+  /* Color styles */
+  --main-bg-color: #1f2937;
+  --secondary-bg-color: #e5e7eb;
+  --button-color: #3882f6;
+
+  --hero-main-font-color: #f9faf8;
+  --hero-secondary-font-color: #a9adb6;
+  --dark-font-color: #1f2937;
+}
+
+* {
+  /* Box sizing and margin, padding defaults */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header,
+.hero {
+  background-color: var(--main-bg-color);
+  color: var(--hero-main-font-color);
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin-left: 0.5em;
+}
+
+/* 
+=======================
+Navigation
+=======================
+ */
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+  padding-top: 0.6em;
+}
+
+.main-nav ul.nav,
+.main-nav .logo {
+  margin: 1.6em;
+}
+
+ul.nav {
+  list-style: none;
+  margin-right: 0.5em;
+}
+
+.nav li {
+  display: inline-block;
+}
+
+.nav a {
+  font-size: 1rem;
+  color: var(--hero-secondary-font-color);
+  text-decoration: none;
+  display: block;
+  padding: 0.2em 0.4em;
+}
+
+/* 
+=================
+Hero section
+================= 
+*/
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 0.7em;
+}
+
+.hero > * {
+  flex: 1;
+  margin: 1.5em;
+  /* max-width: 48%; */
+}
+
+.hero-img img {
+  display: block;
+}
+
+h2.hero-heading {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+p.hero-text {
+  font-size: 1rem;
+  color: var(--hero-secondary-font-color)
+
+.hero-content {
+  min-width: 250px;
+}
