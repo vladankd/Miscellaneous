@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Loops: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      section {
+        background-color: rgb(174, 249, 89);
+        padding: 1.5em;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="../styles.css" /> -->
+  </head>
+
+  <body>
+    <section class="preview"></section>
+  </body>
+  <script>
+    // -----------------
+    // Loops 1
+    // -----------------
+    // const myArray = ["tomatoes", "chick peas", "onions", "rice", "black beans"];
+    // const list = document.createElement("ul");
+
+    // // Add your code here
+
+    // for (const item of myArray) {
+    //   const listItem = document.createElement("li");
+    //   list.appendChild(listItem);
+    //   listItem.innerText = item;
+    // }
+
+    // // Don't edit the code below here!
+
+    // const section = document.querySelector("section");
+    // section.appendChild(list);
+    //-------------------------------------------------
+
+    // -------------------
+    // Loops 2
+    // -------------------
+
+    // const name = "Francesca";
+    // const para = document.createElement("p");
+
+    // const phonebook = [
+    //   { name: "Chris", number: "1549" },
+    //   { name: "Li Kang", number: "9634" },
+    //   { name: "Anne", number: "9065" },
+    //   { name: "Francesca", number: "3001" },
+    //   { name: "Mustafa", number: "6888" },
+    //   { name: "Tina", number: "4312" },
+    //   { name: "Bert", number: "7780" },
+    //   { name: "Jada", number: "2282" },
+    // ];
+
+    // // Add your code here
+    // const noNameFound = `We are sorry but we don't have a number of ${name}`;
+
+    // for (const i of phonebook) {
+    //   if (i.name === name) {
+    //     para.innerText = `${i.name}'s phone number is: ${i.number}`;
+    //     break;
+    //   } else {
+    //     para.innerText = noNameFound;
+    //   }
+    // }
+
+    // // Don't edit the code below here!
+    // const section = document.querySelector("section");
+    // section.appendChild(para);
+
+    // -------------------
+    // Loop 3
+    // -------------------
+
+    let i = 500;
+    const para = document.createElement("p");
+
+    function isPrime(num) {
+      for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    // Add your code here
+    for (i; i >= 2; i--) {
+      if (isPrime(i)) {
+        if (i === 2) {
+          para.textContent += i + ".";
+        } else para.textContent += i + ", ";
+      } else continue;
+    }
+    // Don't edit the code below here!
+    const section = document.querySelector("section");
+    section.appendChild(para);
+    // -------------------
+
+    // Output prime numbers - javascript.info
+
+    let n = 50;
+
+    function getPrimes(n) {
+      for (let i = 2; i < n; i++) {
+        if (n % i === 0) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    for (n; n >= 2; n--) {
+      if (getPrimes(n)) {
+        console.log(n);
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>
+      This example requires you to enter commands in your browser's JavaScript
+      console (see
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools"
+        >What are browser developer tools</a
+      >
+      for more information).
+    </p>
+
+    <script>
+      const person = {
+        name: { first: "Bob", last: "Smith" },
+        age: 32,
+        bio() {
+          console.log(
+            `${this.name.first} ${this.name.last} is ${this.age} years old.`
+          );
+        },
+        introduceSelf() {
+          console.log(`Hi! I'm ${this.name.first}.`);
+        },
+      };
+
+      const myDataName = "height";
+      const myDataValue = "1.75cm";
+      person[myDataName] = myDataValue;
+
+      function Person(fName, lName, age, height, weight) {
+        this.fName = fName;
+        this.lName = lName;
+        this.age = age;
+        this.height = height;
+        this.weight - weight;
+
+        this.intruduction = function () {
+          console.log(
+            `Hello, my name is ${this.fName} ${this.lName} I am ${this.age} old. I am ${this.height} tall and I weigh ${this.weight} kg.`
+          );
+        };
+      }
+
+      const john = new Person("John", "Doe", 35, 1.78, 94);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Function library example</title>
+    <style>
+      input {
+        font-size: 2em;
+        margin: 10px 1px 0;
+      }
+      .container {
+        background-color: rgba(58, 21, 7, 0.579);
+        max-width: 600px;
+        margin: auto;
+        padding: 5em;
+      }
+
+      canvas {
+        border: 3px solid #cfd109;
+        box-shadow: 1px 1px 5px 2px #bada55;
+        margin-left: 95px;
+      }
+
+      .preview {
+        padding: 1.5em;
+        background-color: #bada55;
+        margin: 1.5em auto;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: monospace;
+        color: rgb(121, 3, 3);
+      }
+    </style>
+  </head>
+  <body>
+    <input class="numberAInput" type="text" />
+    <br />
+    <input class="numberBInput" type="text" />
+    <p class="numbers_output"></p>
+    <div class="container">
+      <section class="preview">Hi there :) !!!</section>
+      <canvas width="420" height="350">
+        <img src="../placeholder_img.png" alt="rectangle on the canvas" />
+      </canvas>
+    </div>
+
+    <script>
+      const inputA = document.querySelector(".numberAInput");
+      const inputB = document.querySelector(".numberBInput");
+      const para = document.querySelector("p");
+
+      // //   Functions
+
+      // function squared(num) {
+      //   return num * num;
+      // }
+
+      // function cubed(num) {
+      //   return num * num * num;
+      // }
+
+      // function factorial(num) {
+      //   if (num < 0) return undefined;
+      //   if (num === 0) return 1;
+      //   let x = num - 1;
+      //   while (x > 1) {
+      //     num *= x;
+      //     x--;
+      //   }
+      //   return num;
+      // }
+
+      // //   My functions for practice
+
+      // function root(num, root = 2) {
+      //   console.log(root);
+      //   return num ** (1 / root);
+      // }
+
+      // function circleC(r) {
+      //   const PI = 3.14159256359;
+      //   return PI * 2 * r;
+      // }
+
+      // function circleArea(r) {
+      //   const PI = 3.14159256359;
+      //   return PI * r ** 2;
+      // }
+
+      function random(num) {
+        return Math.floor(Math.random() * num + 1);
+      }
+
+      // //   output
+
+      input.addEventListener("change", () => {
+        const num = parseInt(inputA.value);
+        if (isNaN(num)) {
+          para.textContent = "You need to enter the number!";
+        } else {
+          // para.innerHTML = `Number squared = ${squared(num)}.<br>`;
+          // para.innerHTML += `Number cubed = ${cubed(num)}.<br>`;
+          // para.innerHTML += `Number factorial = ${factorial(num)}.<br>`;
+          // para.innerHTML += `Number square root = ${root(num)}.<br>`;
+          // para.innerHTML += `Circumference of the circle where the number is r = ${circleC(
+          //   num
+          // ).toFixed(2)} cm.<br>`;
+          // para.innerHTML += `Area of the circle where the number is r = ${circleArea(
+          //   num
+          // ).toFixed(2)} cm<sup>2</sup>.<br>`;
+          para.innerHTML = `num a ${num}`;
+          para.innerHTML = `num b ${num}`;
+        }
+      });
+
+      // // Function 2
+      // //===========
+
+      // const canvas = document.querySelector("canvas");
+      // const ctx = canvas.getContext("2d");
+
+      // const x = 125;
+      // const y = 170;
+      // const width = 150;
+      // const height = 75;
+      // const color = "blue";
+
+      // // Add your code here
+
+      // function drawRectangle(x, y, w, h, color) {
+      //   ctx.fillStyle = color;
+      //   ctx.fillRect(x, y, w, h);
+      // }
+
+      // drawRectangle(x, y, width, height, color);
+
+      // // Don't edit the code below here!
+
+      // const section = document.querySelector("section");
+
+      // // ==========================
+
+      // // Function 4
+      // const section = document.querySelector(".preview");
+
+      // const names = [
+      //   "Chris",
+      //   "Li Kang",
+      //   "Anne",
+      //   "Francesca",
+      //   "Mustafa",
+      //   "Tina",
+      //   "Bert",
+      //   "Jada",
+      // ];
+      // const para = document.createElement("p");
+
+      // function isShort(name) {
+      //   return name.length < 5;
+      // }
+
+      // const shortNames = names.filter((name) => name.length < 5);
+      // para.textContent = shortNames;
+
+      // // Don't edit the code below here!
+
+      // section.innerHTML = " ";
+
+      // section.appendChild(para);
+
+      // // ===========================
+
+      // Function pow(x,n)
+
+      // ==================
+    </script>
+  </body>
+</html>

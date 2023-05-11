@@ -1,0 +1,46 @@
+:root {
+  /* Colors */
+  --main-bg-color: #e1efef;
+  --body-bg-color: #ead3b7;
+
+  --font-main-color: #313331;
+
+  /* Box sizing */
+  box-sizing: border-box;
+
+  /* Fonts */
+  --main-font: helvetica, arial, sans-serif;
+}
+
+/* BOX SIZING FIX */
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+/* Clearfix floats */
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+body {
+  font-size: 1.125em;
+  font-family: var(--main-font);
+  color: var(--font-main-color);
+
+  background-color: var(--body-bg-color);
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+padding: 1.5em;
+  background-color: var(--main-bg-color);
+}

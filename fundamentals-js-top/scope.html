@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Function scope example</title>
+    <style>
+      .container {
+        max-width: 580px;
+        padding: 1.2em;
+        margin: 0 auto;
+        background-color: rgb(135, 209, 135);
+      }
+      h1 {
+        text-align: center;
+      }
+      .output {
+        padding: 1.5em;
+        background-color: rgb(244, 206, 149);
+      }
+      .admitted {
+        padding: 1.5em;
+        background-color: #bada55;
+      }
+      .refused {
+        padding: 1.5em;
+        background-color: #ef6555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Arrays and loops!!!</h1>
+      <div class="output">
+        <div class="admitted"></div>
+        <div class="refused"></div>
+      </div>
+    </div>
+    <script>
+      // const x = 1;
+
+      // function a() {
+      //   const y = 2;
+      //   output(x);
+      // }
+
+      // function b() {
+      //   const z = 3;
+      //   output(x);
+      // }
+
+      // function output(value) {
+      //   const para = document.createElement("p");
+      //   document.body.appendChild(para);
+      //   para.textContent = `Value: ${value}`;
+      // }
+
+      // Countdown
+
+      // let output = document.querySelector(".output");
+      // output.innerHTML = "";
+
+      // let i = 10;
+      // while (i >= 0) {
+      //   const para = document.createElement("p");
+      //   if (i === 10) {
+      //     para.textContent = `Countdown begins ${i} `;
+      //   } else if (i === 0) {
+      //     para.textContent = `Blast off`;
+      //   } else {
+      //     para.textContent = `${i}`;
+      //   }
+      //   output.appendChild(para);
+
+      //   i--;
+      // }
+
+      // Filling in a guest list
+
+      const people = [
+        "Chris",
+        "Anne",
+        "Colin",
+        "Terri",
+        "Phil",
+        "Lola",
+        "Sam",
+        "Kay",
+        "Bruce",
+      ];
+
+      const admitted = document.querySelector(".admitted");
+      const refused = document.querySelector(".refused");
+      admitted.textContent = "Admit: ";
+      refused.textContent = "Refuse: ";
+
+      const refusedPeopleArr = [];
+      const copyOfPeopleArr = [...people];
+
+      for (const name of copyOfPeopleArr) {
+        if (name === "Phil" || name === "Lola") {
+          refusedPeopleArr.push(people.splice(people.indexOf(name), 1));
+        }
+      }
+      // loop starts here
+      for (let i = 0; i < people.length; i++) {
+        if (i === people.length - 1) {
+          admitted.textContent += people[i].concat(".");
+        } else admitted.textContent += people[i].concat(", ");
+      }
+      for (let i = 0; i < refusedPeopleArr.length; i++) {
+        if (i === refusedPeopleArr.length - 1) {
+          refused.textContent += refusedPeopleArr[i] + ".";
+        } else refused.textContent += refusedPeopleArr[i] + ", ";
+      }
+    </script>
+  </body>
+</html>
