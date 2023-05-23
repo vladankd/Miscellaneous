@@ -1,0 +1,90 @@
+:root {
+  /* box sizing default*/
+  box-sizing: border-box;
+
+  /* Font variables */
+
+  --main-font: curier;
+
+  /* Color variables */
+
+  --main-font-color: white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.clearfix,
+.clearfix::before,
+.clearfix::after {
+  display: table-cell;
+  content: " ";
+}
+.clearfix::after {
+  clear: both;
+}
+
+body {
+  font-size: 1.125em;
+  color: var(--main-font-color);
+  font-family: var(--main-font);
+  background-image: url(../Assets/IMG/darkBG.jpg);
+  background-size: cover;
+}
+
+/* Page styling */
+
+#main-heading {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  margin-top: 3.5em;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.keys {
+  margin-top: 15em;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.key {
+  /* height: 80px; */
+  width: 100px;
+  border: 2px solid #e0d5d5;
+  box-shadow: 0px 0px 15px 5px #eeedf678;
+  border-radius: 0.2em;
+  margin: 0 0.5em;
+  background-color: rgba(0, 0, 0, 0.486);
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.07s;
+}
+
+.key > kbd {
+  font-size: 2.8em;
+  display: inline-block;
+}
+
+.sound {
+  font-size: 0.8em;
+  letter-spacing: 0.18em;
+  color: #bada55;
+}
+
+.playing {
+  border: 2px solid #bada55;
+  box-shadow: 0px 0px 15px 15px #bbda55d6;
+  transform: scale(1.2);
+}
