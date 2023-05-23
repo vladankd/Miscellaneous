@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bubbling, capture and propagation</title>
+    <style>
+      div {
+        padding: 2.5em;
+      }
+      .one {
+        background-color: coral;
+      }
+      .two {
+        background-color: burlywood;
+      }
+      .three {
+        background-color: cornflowerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">
+      <div class="two">
+        <div class="three"></div>
+      </div>
+    </div>
+    <script>
+      let divs = document.querySelectorAll("div");
+
+      divs.forEach((div) =>
+        div.addEventListener("click", logText, { capture: true })
+      );
+
+      function logText(e) {
+        console.log(this.classList.value);
+        // e.stopPropagation();
+      }
+    </script>
+  </body>
+</html>
