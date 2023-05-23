@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const removeFromArray = function (arr, remove) {
+        let finalArr = arr;
+        finalArr.splice(finalArr.indexOf(remove), 1);
+
+        return finalArr;
+      };
+
+      console.log(removeFromArray([1, 2, 3, 4], 3));
+    </script>
+  </body>
+</html>

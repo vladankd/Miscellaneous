@@ -1,9 +1,9 @@
 :root {
   /* Colors */
-  --main-bg-color: #e1efef;
-  --body-bg-color: #ead3b7;
+  --main-bg-color: #476565;
+  --body-bg-color: #919968;
 
-  --font-main-color: #313331;
+  --font-main-color: #c0dec0;
 
   /* Box sizing */
   box-sizing: border-box;
@@ -41,6 +41,6 @@ body {
 .container {
   max-width: 1080px;
   margin: 0 auto;
-padding: 1.5em;
+  padding: 1.5em;
   background-color: var(--main-bg-color);
 }
