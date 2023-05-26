@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM practice file</title>
+    <!-- jQuery import -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style>
+      :root {
+        box-sizing: border-box;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      body {
+        font-size: 1.125em;
+        font-family: "Courier New", Courier, monospace;
+      }
+      #main_heading {
+        background-color: coral;
+        padding: 1.1em;
+        text-align: center;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        letter-spacing: 0.5em;
+        color: #dffefe;
+      }
+      .container {
+        max-width: 590px;
+        margin: auto;
+        padding: 1em;
+        border: 1px solid gray;
+        border-radius: 0.2em;
+        min-height: 250px;
+        box-shadow: 0 0 5px 2px rgba(245, 104, 33, 0.405);
+      }
+
+      #item_input_field {
+        border: none;
+        outline: none;
+        padding: 0.48em 0.2em;
+        box-shadow: inset 0 -1px gray;
+      }
+
+      #add_item {
+        background-color: coral;
+        border: none;
+        color: #dffefe;
+        border-radius: 0.2em;
+        padding: 0.5em 1.5em;
+      }
+      .list_group {
+        padding-left: 0;
+      }
+      .list_group > li {
+        list-style-type: none;
+        border: 1px solid gray;
+        border-radius: 0.2em;
+        padding: 0.7em 0.3em;
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="main_heading">To do's - plan your day</h1>
+    </header>
+    <div class="container">
+      <div class="main_input">
+        <h2 class="title">Add items</h2>
+        <input type="text" name="item_input_field" id="item_input_field" />
+        <button type="submit" id="add_item">Add item</button>
+      </div>
+      <section class="list_container">
+        <h2 class="title">Items</h2>
+        <ul class="list_group"></ul>
+      </section>
+    </div>
+    <script>
+      const input = document.querySelector("#item_input_field");
+      const add_item = document.querySelector("#add_item");
+
+      const list = document.querySelector(".list_group");
+
+      //   Event listeners for button and i=input field
+      add_item.addEventListener("click", addItem);
+      input.addEventListener("change", addItem);
+
+      //   Adding items to the list
+      function addItem() {
+        if (!input.value) return;
+        const item = document.createElement("li");
+
+        item.innerText = input.value;
+        list.appendChild(item);
+
+        input.value = "";
+      }
+      $(function () {
+        $("#timepicker").timepicker();
+      });
+    </script>
+  </body>
+</html>
